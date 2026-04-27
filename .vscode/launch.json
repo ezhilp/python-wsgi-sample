@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Flask dev server",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "app.main",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Run Waitress",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "waitress",
+      "args": [
+        "--listen=0.0.0.0:8080",
+        "app.wsgi:app"
+      ],
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
